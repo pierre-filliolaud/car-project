@@ -8,10 +8,12 @@ import org.springframework.web.bind.annotation.*;
 public class CarRentalController {
 
 	CarRepository carRepository;
+	CarService carService;
 
 	@Autowired
-	public CarRentalController(CarRepository carRepository){
+	public CarRentalController(CarRepository carRepository, CarService carService){
 		this.carRepository = carRepository;
+		this.carService = carService;
 		Car ferrari = new Car();
 		ferrari.setPlateNumber("11AA22");
 		ferrari.setModel("Ferrari");
@@ -34,8 +36,10 @@ public class CarRentalController {
 	@ResponseBody
 	public Car rent(@PathVariable(name="plateNumber") String plateNumber, @RequestParam(name="louer", required=true) boolean louer) {
 		Car car = carRepository.findByPlateNumber(plateNumber);
-		car.setRented(louer);
+		car.setRented(!car.isRented());
 		System.out.println(car);
+		carRepository.save(car);
+		carService.sendMsg();
 		return car;
 	}
 

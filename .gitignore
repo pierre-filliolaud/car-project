@@ -7,12 +7,12 @@
 ######################
 # Node
 ######################
-/car-frontend/node/
-/car-frontend/node_tmp/
-/car-frontend/node_modules/
-/car-frontend/npm-debug.log.*
-/car-frontend/.awcache/*
-/car-frontend/.cache-loader/*
+node/
+node_tmp/
+node_modules/
+npm-debug.log.*
+.awcache/*
+.cache-loader/*
 
 ######################
 # SASS
@@ -22,24 +22,24 @@
 ######################
 # Eclipse
 ######################
-/car-backend/*.pydevproject
-/car-backend/.project
-/car-backend/.metadata
-/car-backend/tmp/
-/car-backend/tmp/**/*
-/car-backend/*.tmp
-/car-backend/*.bak
-/car-backend/*.swp
-/car-backend/*~.nib
-/car-backend/local.properties
-/car-backend/.classpath
-/car-backend/.settings/
-/car-backend/.loadpath
-/car-backend/.factorypath
-/car-backend/src/main/resources/rebel.xml
+*.pydevproject
+.project
+.metadata
+tmp/
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+.factorypath
+/src/main/resources/rebel.xml
 
 # External tool builders
-/car-backend/.externalToolBuilders/**
+.externalToolBuilders/**
 
 # Locally stored "Eclipse launch configurations"
 *.launch
@@ -53,14 +53,17 @@
 ######################
 # Intellij
 ######################
-/car-backend/.idea/
-/car-backend/*.iml
-/car-backend/*.iws
-/car-backend/*.ipr
-/car-backend/*.ids
-/car-backend/*.orig
-/car-backend/classes/
-/car-backend/out/
+.idea/
+*.iml
+*.iws
+*.ipr
+*.ids
+*.orig
+classes/
+out/
+bin/
+build/
+.gradle/
 
 ######################
 # Visual Studio Code
